@@ -1,0 +1,38 @@
+name: Manual Events with params
+
+on:
+ workflow_dispatch:
+  inputs:
+   name:
+    description: 'Name of the person to greet'
+    required: true
+    type: string
+   greeting:
+    description: 'Type of grreting'
+    required: true
+    type: string
+   data:
+    description: 'Base64 encoded content of the file'
+    required: false
+    type: string
+
+jobs:
+  greet:
+   runs-on: ubuntu-latest
+   steps:
+   - name: Decode file content
+     run: |
+          echo "$ {{ inputs.data }}"  | base64 --decode > ./decoded_file.txt
+   - name: Display greeting
+     run: |
+          echo "$ {{ inputs.greeting }} , ${{ inputs.name }}!"
+   - name: Display File Content
+     run: |
+          echo "Contecnts of the file: "
+          cat ./decoded_file.txt 
+           
+      
+          
+   
+  
+   
