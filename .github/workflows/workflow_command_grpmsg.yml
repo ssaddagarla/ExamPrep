@@ -15,7 +15,7 @@ jobs:
               echo "my_val = Hello There" >> $GITHUB_ENV
        - name: "Output Env"
          run: |
-              echo "$my_val"
+              echo $GITHUB_ENV
               
        
    
