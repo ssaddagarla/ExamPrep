@@ -13,9 +13,10 @@ jobs:
        - name: "Set Env Var"
          run: |
               echo "my_val = Hello There" >> $GITHUB_ENV
+              echo "$my_val"
        - name: "Output Env"
          run: |
-              echo $GITHUB_ENV
+              echo "$my_val"
               
        
    
