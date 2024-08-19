@@ -12,7 +12,7 @@ jobs:
               echo "::endgroup::"
        - name: "Set Env Var"
          run: |
-              echo "my_val = Hello There" >> $GITHUB_ENV
+              echo "my_val = Hello" >> $GITHUB_ENV
               echo "$my_val"
        - name: "Output Env"
          run: |
