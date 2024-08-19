@@ -9,7 +9,7 @@ jobs:
               echo "::group::Group Messages Logging"
               echo "Msg 1"
               echo "Msg 2"
-              echo "::endgroup::
+              echo "::endgroup::"
               
        
    
