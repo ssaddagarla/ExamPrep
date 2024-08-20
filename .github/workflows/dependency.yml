@@ -7,14 +7,14 @@ jobs:
  job2:
   runs-on: ubuntu-latest
   needs: job1
-   steps:
+  steps:
     - name: step A
-     run: |
-      echo "$greet_name"
+      run: |
+           echo "$greet_name"
  job1:
    runs-on: ubuntu-latest
    steps:
     - name: step b
-    run: echo "$greeting"
+      run: echo "$greeting"
     
     
