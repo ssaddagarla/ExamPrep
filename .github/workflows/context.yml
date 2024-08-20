@@ -3,6 +3,7 @@ on: push
 env:
  my_action: ${{ github.action }}
  my_actor: ${{ github.actor }}
+ my_event: ${{ github.event_name }}
 jobs:
  Env_context:
   name: context_test
@@ -13,5 +14,6 @@ jobs:
            echo "Print env values:"
            echo "Action! $my_action"
            echo "Actor! $my_actor"
+           echo "Event! $my_event"
         
     
