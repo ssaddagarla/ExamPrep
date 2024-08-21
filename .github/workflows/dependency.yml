@@ -15,6 +15,13 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: step b
-      run: echo "$greeting"
+      run: |
+            echo "$GITHUB_PATH"
+            echo "$greeting"
+            - name: Add directory to path
+                  echo "$GITHUB_WORKSPACE/my_scripts" >> $GITHUB_PATH
+            - name: check path
+               run: echo $PATH
+            
     
     
